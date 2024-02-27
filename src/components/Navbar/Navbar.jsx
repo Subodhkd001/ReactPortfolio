@@ -11,7 +11,7 @@ const Navbar = () => {
       </a>
       <div className={styles.menu}>
         <img
-          onClick={() => setMenuOpen(true)}
+          
           className={styles.menuBtn}
           src={
             menuOpen
@@ -19,6 +19,7 @@ const Navbar = () => {
               : getImageUrl("nav/menuIcon.png")
           }
           alt="menu-btn"
+          onClick={() => setMenuOpen(!menuOpen)}
         />
         <ul
           className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
